@@ -24,12 +24,12 @@ jobs:
 
     - name: Build and Push Frontend
       run: |
-        docker build -t mindlesstd/nextjs-frontend:latest ./frontend
+        docker build -t mindlesstd/nextjs-frontend:latest ./src/frontend
         docker push mindlesstd/nextjs-frontend:latest
 
     - name: Build and Push Backend
       run: |
-        docker build -t mindlesstd/fastapi-backend:latest ./backend
+        docker build -t mindlesstd/fastapi-backend:latest ./src/backend
         docker push mindlesstd/fastapi-backend:latest
 
     - name: Deploy to Kubernetes
